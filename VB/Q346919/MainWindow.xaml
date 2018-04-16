@@ -1,0 +1,27 @@
+﻿<Window x:Class="Q346919.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
+        xmlns:local="clr-namespace:Q346919"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <dxg:GridControl DataSource="{Binding}">
+            <dxg:GridControl.View>
+                <dxg:TableView>
+                    <i:Interaction.Behaviors>
+                        <local:GridCustomBehavior>
+                            <local:GridCustomBehavior.GridBottomContent>
+                                <TextBlock Text="BestFunc is applied" HorizontalAlignment="Center" />
+                            </local:GridCustomBehavior.GridBottomContent>
+                        </local:GridCustomBehavior>
+                    </i:Interaction.Behaviors>
+                </dxg:TableView>
+            </dxg:GridControl.View>
+            <dxg:GridControl.Columns>
+                <dxg:GridColumn FieldName="Value1" />
+                <dxg:GridColumn FieldName="Value2" />
+            </dxg:GridControl.Columns>
+        </dxg:GridControl>
+    </Grid>
+</Window>
